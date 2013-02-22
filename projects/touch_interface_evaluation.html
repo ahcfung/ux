@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Touch Interface Evaluation l Alex H.C. Fung</title>
+    <meta name="description" content="This is an online portofolio for Alex H.C. Fung">
+    <meta name="author" content="Alex H.C. Fung">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!--Stylesheets-->
+      <!-- Bootstrap Stylsheets http://twitter.github.com/bootstrap/ -->
+      <link rel="stylesheet" href="../css/bootstrap.css" >
+      <!-- Main Stylesheet -->
+      <link rel="stylesheet" href="../css/main.css" >
+      <!-- Javascripts -->
+      <!-- Main Javascript -->
+      <script src="js/main.js"></script>
+      <!-- slider -->
+	<link rel="stylesheet" href="../css/global.css">
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+	<script src="../js/slides.min.jquery.js"></script>
+	<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: '../im/slider/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true
+			});
+		});
+	</script>
+  </head>
+  
+  <body>
+    <div class="fill">
+      <div class="container">
+	<div class="row" id="GlobalNav">
+	  <div class="span12">
+	    <span id="logo">
+	    <a href="../portfolio.html">
+	    <span id="name" >Alex H.C. Fung</span>
+	    <span id="title">User Experience Researcher & Designer</span>
+	    </a>
+	    </span>
+	    
+	    <ul>
+	     <!-- <li><a href="../contact.html">Contact</a></li>-->
+	      <li><a href="../about.html">About</a></li>
+	      <li><a id="active" href="../portfolio.html">Portfolio</a></li>
+	    </ul>	
+	  </div>
+	</div> <!-- end GlobalNav-->
+      </div>
+    </div>  
+  
+    <div class="container">   
+  
+  
+  <!--new project-->
+    <h1>Touch Interface Evaluation</h1>
+ 
+     <div class="row" id="breadcrumbs">
+      <div class="span12">
+	<a href="../portfolio.html">Portfolio</a> > Touch Interface Evaluation
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="span12">
+		  <div id="example">
+			  <div id="slides">
+				  <div class="slides_container">
+				  <a href="#"><img src="../im/touch_interface_evaluation/operations_center.jpg" style="margin-left:110px" width="600" height="400" alt="Slide 4"></a>
+				  <a href="#"><img src="../im/touch_interface_evaluation/touch_panel.jpg" style="margin-left:110px" width="600" height="406" alt="Slide 4"></a>
+				  <a href="#"><center><img src="../im/touch_interface_evaluation/CDOC.jpg" width="905" height="593" alt="Slide 4"></center></a>
+				  </div>
+				  <a href="#" class="prev"><img src="../im/slider/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
+				  <a href="#" class="next"><img src="../im/slider/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
+			  </div>
+			  <span id="frame"></span>
+		  </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="span4">
+      <h2>Overview</h2>
+      <p>The San Diego Red Cross Headquarters had contracted a company to design a new touch technology to improve its disaster support system within the San Diego County. I started out as a user acceptance tester, but moved into the role of a user experience researcher after noticing that my peers were experiencing recurring usability problems.
+      </p>
+      </div>
+      
+  
+      <div class="span4">
+      <h2>Methods</h2>
+      <p>I conducted an informal think-aloud protocol on the other user acceptance testers by having them speak aloud their thoughts as they attempted to complete the required tasks. After the session, I spent time alone with the interface to critique it for further usability errors.
+      </div>
+      
+  
+      <div class="span4">
+      <h2>Solution</h2>
+      <p>I compiled a report combining my findings and suggestions, then sent it to the head of the disaster support department, who then passed it to the software team. Many minor usability errors were corrected in the final version of the touch interface. However, due to the limitation of funding and time, some of the major usability errors were unable to be resolved as they required an entire interface redesign. Nonetheless, the software team expressed gratitude as they have learned a great deal about usability from my report.
+      </p>
+      </div>
+    </div>
+    
+    <div class="row">
+    <div class="span12">
+    <a id="return" href="../portfolio.html">Go back to portfolio>></a>
+    </div>
+    </div>
+   
+    <footer id="footer">
+      <div class="row">
+	<div class="span12">
+	  <ul>
+	    <li>&copy;2013 Alex H.C. Fung. All rights reserved.</li>          
+	    <li>Built using Bootstrap, Mosaic, Isotope, and Fancybox</li>
+	  </ul>
+	</div>
+      </div>
+    </footer>
+  
+     
+    </div> <!-- end container -->
+  </body>
+</html>

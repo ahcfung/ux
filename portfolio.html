@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio l Alex H.C. Fung</title>
+    <meta name="description" content="This is an online portofolio for Alex H.C. Fung">
+    <meta name="author" content="Alex H.C. Fung">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <!--Stylesheets-->
+      <!-- Bootstrap Stylsheets http://twitter.github.com/bootstrap/ -->
+      <link rel="stylesheet" href="css/bootstrap.css" >
+      <!-- Main Stylesheet -->
+      <link rel="stylesheet" href="css/main.css" >
+      <!-- Project Gallery -->
+      <link rel="stylesheet" href="css/mosaic.css" type="text/css" media="screen" />
+      <!-- Fancybox (haven't linked to helpers yet)-->
+      <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css" >
+      <!-- isotope -->
+      <link rel="stylesheet" href="css/isotope.css" />
+      
+    <!--Javascripts-->
+      <!-- Main Javascript -->
+      <script src="js/main.js"></script>
+      <!--Project Gallery-->
+      <script src="js/fancybox/base.js"></script>  <!--*****needed for mosaic to work; order in which the script is written matters!-->
+      <script type="text/javascript" src="js/mosaic.1.0.1.min.js"></script>
+      <script type="text/javascript" src="js/mosaic.1.0.1.js"></script>
+      <!-- Fancybox Javascripts: http://fancyapps.com/fancybox/#examples (haven't linked to helpers) -->
+      <script src="js/fancybox/jquery.fancybox.js"></script>
+      <!-- Isotope (filter) -->
+      <script src="js/isotope/jquery-1.7.1.min.js"></script>
+      <script src="js/isotope/jquery.isotope.min.js"></script>
+      <script src="js/isotope/fake-ux.js"></script>
+      <script>
+	$(function(){
+	  
+	  var $container = $('#container');
+ 
+	  console.time('init');
+	  $container.isotope({
+	    itemSelector : '.ux',
+	    // layoutMode : 'fitRows',
+	    masonry : {
+	      columnWidth : 120
+	    },
+	    masonryHorizontal : {
+	      rowHeight: 120
+	    },
+	    cellsByRow : {
+	      columnWidth : 240,
+	      rowHeight : 240
+	    },
+	    cellsByColumn : {
+	      columnWidth : 240,
+	      rowHeight : 240
+	    },
+	    getSortData : {
+	      symbol : function( $elem ) {
+		return $elem.attr('data-symbol');
+	      },
+	      category : function( $elem ) {
+		return $elem.attr('data-category');
+	      },
+	      number : function( $elem ) {
+		return parseInt( $elem.find('.number').text(), 10 );
+	      },
+	      weight : function( $elem ) {
+		return parseFloat( $elem.find('.weight').text().replace( /[\(\)]/g, '') );
+	      },
+	      name : function ( $elem ) {
+		return $elem.find('.name').text();
+	      }
+	    }
+	  });
+	  
+	  console.timeEnd('init');
+      
+	  var $optionSets = $('#options .option-set'),
+	      $optionLinks = $optionSets.find('a');
+      
+	  $optionLinks.click(function(){
+	    var $this = $(this);
+	    // don't proceed if already selected
+	    if ( $this.hasClass('selected') ) {
+	      return false;
+	    }
+	    var $optionSet = $this.parents('.option-set');
+	    $optionSet.find('.selected').removeClass('selected');
+	    $this.addClass('selected');
+      
+	    // make option object dynamically, i.e. { filter: '.my-filter-class' }
+	    var options = {},
+		key = $optionSet.attr('data-option-key'),
+		value = $this.attr('data-option-value');
+	    // parse 'false' as false boolean
+	    value = value === 'false' ? false : value;
+	    options[ key ] = value;
+      
+	    console.time( key );
+	    if ( key === 'layoutMode' && changeLayoutMode ) {
+	      // changes in layout modes need extra logic
+	      changeLayoutMode( $this, options )
+	    } else {
+	      // otherwise, apply new options
+	      $container.isotope( options );
+	    }
+	    console.timeEnd( key );
+      
+	    return false;
+	  });
+      
+	});
+      </script>
+  </head>
+  
+  <body>
+    
+
+
+
+    <div class="fill">
+      <div class="container">
+	<div class="row" id="GlobalNav">
+	  <div class="span12">
+	    <span id="logo">
+	    <a href="portfolio.html">
+	    <span id="name">Alex H.C. Fung</span>
+	    <span id="title">User Experience Researcher & Designer</span>
+	    </a>
+	    </span>
+	    
+	    <ul>
+	      <!--<li><a href="contact.html">Contact</a></li>-->
+	      <li><a href="about.html">About</a></li>
+	      <li><a id="active" href="portfolio.html">Portfolio</a></li>
+	    </ul>	
+	  </div>
+	</div> <!-- end GlobalNav-->
+      </div>
+    </div>
+
+
+	
+	
+  <div class="container">    
+    
+    <div class="row">
+      <div class="span12">
+        <div id="HiddenGlobalBlock"></div>
+      </div>
+    </div>
+
+
+
+  <section id="options">
+    <div class="row" id="SideNav">
+      <div class="span5">
+      <ul id="filter" class="option-set" data-option-key="filter">
+		      <h4><span id="header">Portfolio</span></h4>
+	<li><a href="#filter" data-option-value="*" class="selected">All Projects</a></li>
+        <li><a href="#filter" data-option-value=".ur">User Research</a></li>
+        <li><a href="#filter" data-option-value=".ixd">Interaction Design</a></li>
+        <li><a href="#filter" data-option-value=".ia">Information Architecture</a></li>
+      </ul>
+      </div>
+    </div>
+  </section>
+  
+  <section id="container"> 
+        <div class="mosaic-block bar2 ux ur ixd">
+          <a href="projects/syncal.html" class="mosaic-overlay">
+              <div class="SliderHeading">Syncal</div>
+                <div class="SliderText">An aggregated UC San Diego calendar</div>
+          </a>
+          <a href="projects/syncal.html" class="mosaic-backdrop"><img id="portfolio_image" src="im/project_icons/syncal.png" alt="image"/></a>
+        </div>
+
+
+        <div class="mosaic-block bar2 ux ur ia ixd">
+          <a href="projects/wine_ezine.html" class="mosaic-overlay">
+              <div class="SliderHeading">Wine Cellar</div>
+                <div class="SliderText">A website comprised of online wine information</div>
+          </a>
+          <a href="projects/wine_ezine.html" class="mosaic-backdrop"><img id="portfolio_image" src="im/project_icons/wine_ezine.jpg" alt="image"/></a>
+        </div>
+
+
+        <div class="mosaic-block bar2 ux ur ia ixd">
+          <a href="projects/attorney_website.html" class="mosaic-overlay">
+              <div class="SliderHeading">Attorney Website</div>
+                <div class="SliderText">A professional website for a legal attorney</div>
+          </a>
+          <a href="projects/attorney_website.html" class="mosaic-backdrop"><img id="portfolio_image" src="im/project_icons/attorney_website.jpg" alt="image"/></a>
+        </div>
+<!--
+        <div class="mosaic-block bar2 ux ia">
+          <a href="projects/university_website_redesign.html" class="mosaic-overlay">
+              <div class="SliderHeading">Louisiana.edu Redesign</div>
+                <div class="SliderText">A redesigned prototype of the University of Lousiana at Lafayette's website</div>
+          </a>
+          <a href="projects/university_website_redesign.html" class="mosaic-backdrop"><img id="portfolio_image" src="im/video_ethnography_1.jpg" alt="image"/></a>
+        </div>
+-->
+        <div class="mosaic-block bar2 ux ur">
+          <a href="projects/touch_interface_evaluation.html" class="mosaic-overlay">
+              <div class="SliderHeading">Touch Interface Evaluation  </div>
+                <div class="SliderText">A usability evaluation of the Red Cross Disaster Operations Center's command interface</div>
+          </a>
+          <a href="projects/touch_interface_evaluation.html" class="mosaic-backdrop"><img id="portfolio_image" src="im/project_icons/red_cross.jpg" alt="image"/></a>
+        </div>
+
+        <!--<div class="mosaic-block bar2 ux ur">
+          <a href="projects/nonverbal_ethnography.html" class="mosaic-overlay">
+              <div class="SliderHeading">Nonverbal Ethnography</div>
+                <div class="SliderText">An ethnography to understand nonverbal communication and coordination between stagehands</div>
+          </a>
+          <a href="projects/nonverbal_ethnography.html" class="mosaic-backdrop"><img id="portfolio_image" src="im/project_icons/nonverbal_ethnography.jpg" alt="image"/></a>
+        </div>-->
+  </section>
+
+
+
+
+
+
+    <!--
+    <div class="row">
+      <div class="span12">
+        <h1>Home</h1>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="span12">
+        <p>
+        Welcome to my online portfolio. This is the world of my past projects. I will not lie: none of my projects have been perfect. However, by admitting the flaws and breakdowns in my projects, I have continued to learn and grow as a User Experience Designer. Feel free to explore through my world and don't hesitate to contact me with comments, questions and job opportunities. 
+        </p>
+      </div>
+    </div>
+        -->
+    
+    <footer id="footer">
+    <div class="row">
+      <div class="span12 footer">
+        <ul>
+          <li>&copy;2013 Alex H.C. Fung. All rights reserved.</li>          
+          <li>Built using Bootstrap, Mosaic, Isotope, and Fancybox</li>
+        </ul>
+      </div>
+    </div>
+    </footer>
+
+  
+          <!--<li>For optimal viewing, please use Google Chrome browsers</li>-->
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+   
+  </div> <!-- end container -->
+  </body>
+</html>
