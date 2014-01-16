@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>We Have, We Need l Alex H.C. Fung</title>
+    <meta name="description" content="This is an online portofolio for Alex H.C. Fung">
+    <meta name="author" content="Alex H.C. Fung">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!--Stylesheets-->
+      <!-- Bootstrap Stylsheets http://twitter.github.com/bootstrap/ -->
+      <link rel="stylesheet" href="../css/bootstrap.css" >
+      <!-- Main Stylesheet -->
+      <link rel="stylesheet" href="../css/main.css" >
+    <!-- Javascripts -->
+      <!-- Main Javascript -->
+      <script src="js/main.js"></script>
+      <!-- slider -->
+      <link rel="stylesheet" href="../css/global.css">
+
+      <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+      <script src="../js/slides.min.jquery.js"></script>
+      <script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: '../im/slider/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true
+			});
+		});
+      </script>
+	
+      <!-- Google Analytics -->
+      <script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-39567334-1']);
+	_gaq.push(['_trackPageview']);
+      
+	(function() {
+	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+      </script>
+  </head>
+  
+  <body>
+    <div class="fill">
+      <div class="container">
+	<div class="row" id="GlobalNav">
+	  <div class="span12">
+	    <span id="logo">
+	    <a href="../portfolio.html">
+	    <span id="name" >Alex H.C. Fung</span>
+	    <span id="title">User Experience Researcher & Designer</span>
+	    </a>
+	    </span>
+	    
+	    <ul>
+	      <!--<li><a href="../contact.html">Contact</a></li>-->
+	      <li><a href="../about.html">About</a></li>
+	      <li><a id="active" href="../portfolio.html">Portfolio</a></li>
+	    </ul>	
+	  </div>
+	</div> <!-- end GlobalNav-->
+      </div>
+    </div>  
+  
+    <div class="container">   
+  
+  
+  <!--new project-->
+    <h1>We Have, We Need</h1>
+ 
+     <div class="row" id="breadcrumbs">
+      <div class="span12">
+	<a href="../portfolio.html">Portfolio</a> > We Have, We Need
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="span12">
+		  <div id="example">
+			  <div id="slides">
+				  <div class="slides_container">
+					  <a href="#"><img src="../im/wehave_weneed/inventory.png" style="margin-bottom:65px" width="938" height="778" alt="Slide 3"></a>
+					  <a href="#"><img src="../im/wehave_weneed/requests.png" style="margin-left:0px" width="1098" height="644" alt="Slide 4"></a>
+					  <a href="#"><img src="../im/wehave_weneed/Requests__selected_items.png" style="margin-left:0px" width="1026" height="654" alt="Slide 4"></a>
+				  </div>
+				  <a href="#" class="prev"><img src="../im/slider/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
+				  <a href="#" class="next"><img src="../im/slider/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
+			  </div>
+			  <span id="frame"></span>
+		  </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="span4">
+      <h2>Overview</h2>
+      <p>After Haiti experienced a major earthquake that victimized many of its citizens, nonprofit organizations had no efficient means to communicate with each other to acquire the supplies necessary to aid with disaster relief. Instead, they ordered supplies from their headquarters in their home countries, which often took months to fulfill. In light of this issue, I joined an ongoing team in developing a software that enables nonprofit organizations to request supplies from each other.      </p>
+      </div>
+    
+      <div class="span4">
+      <h2>Methods</h2>
+      <p>I became accustomed to the developing software by conducting a heuristic evaluation. There, I noticed a flaw: users are motivated to request for supplies, but are not motivated to post their own supplies for others. After conducting subsequent usability testing, the team finally decided to shift direction towards an inventory management system. I helped to design page wireframes using Axure and worked with the UI team to implement the new design.     </p>
+      </div>
+      
+      <div class="span4">
+      <h2>Solution</h2>
+      <p>My area of focus is the inventory management section. The user's inventory is separated from their requests. Additionally, context-sensitive options to add, remove and transfer items appear based on the user's interaction with the data. Lastly, I integrated graphics to convey feedback on any data changes.
+      </p>
+      </div>
+    </div>
+     
+    <div class="row">
+    <div class="span12">
+    <a id="return" href="../portfolio.html">Go back to portfolio>></a>
+    </div>
+    </div>
+      
+    <footer id="footer">
+      <div class="row">
+	<div class="span12">
+	  <ul>
+	    <li>&copy;2013 Alex H.C. Fung. All rights reserved.</li>          
+	    <li>Built using Bootstrap, Mosaic, Isotope, and Fancybox</li>
+	  </ul>
+	</div>
+      </div>
+    </footer>
+  
+     
+    </div> <!-- end container -->
+  </body>
+</html>

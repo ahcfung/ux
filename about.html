@@ -37,6 +37,20 @@
       <script src="js/isotope/jquery-1.7.1.min.js"></script>
       <script src="js/isotope/jquery.isotope.min.js"></script>
       <script src="js/isotope/fake-ux.js"></script>
+      
+      <!-- Google Analytics -->
+      <script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-39567334-1']);
+	_gaq.push(['_trackPageview']);
+      
+	(function() {
+	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+      </script>
+
   </head>
   
   <body>
@@ -71,33 +85,58 @@
 
 
   <div class="row">
+
+<!--test-->
+  <span id="RightAlign">
   <div class="span3">
-      <div class="row">
-	<div class="span3">
-	  <h4><span id="header_about">About</span></h4>
-	</div>
-      </div>
-      <div class="row">
-	<div class="span3 offset1-3">
-	  <span id="resume"><a href="https://dl.dropbox.com/u/89360568/resume.pdf" target='_blank'><h3>Resume</h3></a></span>
-	</div>
-      </div>
-      <div class="row">
-	<div class="span3 offset1-4">
-	  Email: ahcfung@gmail.com
-	</div>
-      </div>
+    <div class="row">
+        <div class="span3">
+          <a href="https://dl.dropbox.com/u/89360568/resume.pdf" target='_blank'><h3>Resume</h3></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3 ">
+          Email: ahcfung@gmail.com
+        </div>
+    </div>
   </div>
+  </span>
+<!--test ends-->
+
+
+
+<!-- 
+  <div class="span3">
+    <div class="row">
+      	<div class="span3">
+      	  <h6><span id="header_about">About</span></h6>
+      	</div>
+    </div>
+    <div class="row">
+      	<div class="span3 offset1-3">
+      	  <span id="resume"><a href="https://dl.dropbox.com/u/89360568/resume.pdf" target='_blank'><h3>Resume</h3></a></span>
+      	</div>
+    </div>
+    <div class="row">
+      	<div class="span3 offset1-4">
+      	  Email: ahcfung@gmail.com
+      	</div>
+    </div>
+
+  </div>
+
+-->
 
     <div class="span9">
     <p>
-      Hello there! I'm Alex. Right now, I'm working towards a <b>B.S. in Cognitive Science with specialization in Human-Computer Interaction</b> at the <b>University of California, San Diego</b>.
+      Hello there! I'm Alex. Right now, I'm working towards a <b>B.S. in Cognitive Science with specialization in Human-Computer Interaction</b> at the <b>University of California, San Diego</b> and will be able to work full-time starting <b>this June</b>. 
     </p>
     <p>
-    I live in the realm of user experience, but am particularly fascinated by user experience research. Through my projects, I have enjoyed many aspects of this subfield--from talking with participants in order to gather useful insights to learning about their difficulties as they speak aloud their thoughts in usability tests. Despite my preference in this subfield, I don't mind getting some hands-on work with design since engaging myself in other roles will only help me improve.
+    I live in the realm of user experience, where people&#39s intents, goals and mental models drive design. My main interest gears toward the subfield of user experience research, but I also enjoy diving into the actual conceptualization phase of designing and prototyping. To me, designs should not simply look good. They should also work in a way that makes a difference in users&#39 daily lives&ndash;whether it be through how the design communicates to the users, the possibilities that the design unlocks, or other innovative means.
     </p>
-    <p>   
-    If you want to know more about my work, feel free to contact me!    </p>   
+    <p id="extra_content_space">   
+    If you want to know more about my work, feel free to contact me!
+    </p>   
     </div>
   </div>
 
@@ -106,7 +145,7 @@
   
 
     <footer id="footer">
-    <div class="row">
+    <div class="row" id="extra_footer_space">
       <div class="span12">
         <ul>
           <li>&copy;2013 Alex H.C. Fung. All rights reserved.</li>          

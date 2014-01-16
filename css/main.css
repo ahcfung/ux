@@ -6,7 +6,9 @@
 /*----------------*/
 
 
-
+.RColPadding {
+  margin-left: 10px;
+}
 
 
 
@@ -56,13 +58,18 @@
   margin-right: 12px;
 }
 
+#RightAlign {
+  text-align: right;
+}
+
 #header_about {
-  margin-left: 119px;
+  margin-left: 106px;
+  float: right;
 }
 
 #HeaderContact {
    margin-left: 133px;
-}
+}g
 
 #breadcrumbs {
   font-size: 14px;
@@ -280,17 +287,8 @@ h1 {
    line-height: 20px;
    padding-bottom: 25px;
    margin-top: 10px;
-   border-bottom: 1px solid #CCC;
+   /*border-bottom: 1px solid #CCC;*/
    padding-top: 1em;
-}
-
-h4 {
-   font-size: 30px;
-   font-weight:600;
-   line-height: 20px;
-   padding-bottom: 25px;
-   margin-top: 6px;
-   border-bottom: 1px solid #CCC;
 }
    
 h1 small {
@@ -313,10 +311,10 @@ h2 small {
 h3 {
    font-size: 20px;
    padding-bottom: .2em;
-   padding-top: .8em;
    line-height: 1.5em;
    color: #00579E; /*00579E;*/
 }
+
 
 
 #resume a {
@@ -337,15 +335,15 @@ h5,
 h6 {
      line-height: 
 }
-  /* 
+   
 h4 {
    font-size: 23px;
    font-weight:600;
    margin-bottom: 1em;
    line-height: 1.5em;
    color: #4C4B49;
-  border-bottom: 2px solid #767879;
-/*}*/
+  /* border-bottom: 2px solid #767879;*/
+}
    
 h4 small {
    font-size: 
@@ -356,8 +354,12 @@ h5 {
 }
    
 h6 {
-   font-size: 
-   color: 
+   font-size: 35px;
+   font-weight:600;
+   line-height: 20px;
+   padding-bottom: 25px;
+   margin-top: 10px;
+   /*border-bottom: 1px solid #CCC;*/
 }
 
 p {
@@ -422,7 +424,7 @@ img {
 /* ----------------------------------------      Footer      ---------------------------------------- */
 /* footer bg */
 #footer {
-   background: #FFFFFF;
+   background: #FAFAFA;
    border-top: 1px solid #A29F9F; 
    height:15px; /*bottom bar height*/
    padding-top:10px;
@@ -440,3 +442,14 @@ img {
 }
 
 
+
+
+
+/* --------------------------------------- about -------------------------------- */
+#extra_content_space{
+   padding-bottom: 250px;
+}
+
+#extra_footer_space{
+   padding-bottom: 50px;
+}
