@@ -99,7 +99,7 @@
     
     $.omr.mosaic.defaultOptions = {
         animation	: 'fade',
-        speed		: 280,
+        speed		: 130,
         opacity		: 1,
         preload		: 0,
         anchor_x	: 'left',
