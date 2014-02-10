@@ -482,6 +482,7 @@ h5 {
 
 #selfphoto {
   box-shadow: none;
+  margin-left: 40px;
 }   
 
 h6 {
@@ -499,7 +500,7 @@ h6 {
   color: #307AA3;
 }
 #aboutpadding {
-  margin-top: 105px;
+  margin-top: 80px;
   text-align: center;
 }
 
